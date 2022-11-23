@@ -26,3 +26,97 @@ Gabungkan list B dengan list A
 Langkah-langkah :
 Buat programnya terlebih dahulu seperti gambar di bawah ini
 
+![Screenshot (116)](https://user-images.githubusercontent.com/116137169/203566137-d97a9ff2-6010-4ea8-b289-2bab859f1287.png)
+
+#Membuat sebuah list sebanyak 5 elemen dengan nilai bebas
+a = [1, 4, 6, 8, 9]
+print("List A =", a,)
+# *Akses List
+print("Elemen ke 3 adalah       :", a[2]) #Menampikan elemen 3
+print("Elemen ke 2 - 4 adalah   :", a[1:4]) #Menampilkan elemen 2-4
+print("Elemen terakhir adalah   :", a[4]) #Menampilkan elemen terakhir
+
+# *Ubah Elemen List
+a[3] = 7
+print("Elemen 4 > 7             :", a) #Mengubah elemen 4
+a[3:5] = [7, 10]
+print("Elemen 4-5 > 7, 10       :", a,"\n") #Mengubah elemen 4-5
+
+# *Tambah Elemen List
+a = [1, 4, 6, 8, 9]
+b = [3, 7, 10, 11, 20]
+print("List A =", a)
+print("List B =", b)
+
+b.extend(a[1:3])
+print("Ambil 2 elemen A jadi List B     :",b) #Mengambil 2 bagian A jadi B
+
+b = [3, 7, 10, 11, 20]
+b.append("14")
+print("Tambah nilai string ke list B    :",b) #Menambah list B dengan nilai string
+
+b = [3, 7, 10, 11, 20]
+b.extend([25, 28, 30])
+print("Menambah 3 nilai ke list B       :",b) #Menambah list B dengan 3 nilai
+
+b = [3, 7, 10, 11, 20]
+b = b + a
+print("Menggabung List B dengan A       :",b) #Menggabungkan list B dan A
+
+dan ini adalah hasil run 
+![Screenshot (117)](https://user-images.githubusercontent.com/116137169/203566644-0abf2ee8-5d68-4bbd-bfb5-8956da64c62c.png)
+
+
+# NILAI MAHASISWA
+Buat program sederhana untuk menambahkan data kedalam sebuah list dengan rincian sebagai berikut :
+
+Program meminta memasukkan data sebanyak-banyaknya (gunakan perulangan)
+Tampilkan pertanyaan untuk menambah data (ya/tidak?), apabila jawaban
+"tidak", maka program akan menampilkan daftar datanya.
+Nilai Akhir diambil dari perhitungan 3 komponen nilai (tugas: 30%, uts: 35%, uas: 35%)
+Buat flowchart dan penjelasan programnya pada README.md.
+Commit dan push repository ke github.
+Langkah-langkah :
+Buat programnya terlebih dahulu seperti gambar di bawah ini
+![Screenshot (118)](https://user-images.githubusercontent.com/116137169/203567788-626dd64f-c914-4302-8135-7a768f9396de.png)
+dan inilah hasil run programnya
+![Screenshot (119)](https://user-images.githubusercontent.com/116137169/203567950-3c8902b3-cd43-4664-8719-135aef6558fb.png)
+Buatlah list berupa Nama, NIM, Nilai Tugas, Nilai UTS, Nilai UAS.
+Lalu inputlah Nama, NIM, Nilai Tugas, Nilai UTS, Nilai UAS.
+Lalu mencari nilai akhir dengan perhitungan nilai tugas 30%, nilai uts 35% dan uas 35% , dengan perintah float
+Gunakan perintah append pada Nama, NIM, Nilai tugas, Nilai UTS, Nilai UAS untuk menambahkan 1 item ke elemen terakhir.
+Jika ingin menambah list data ketik "ya" dan jika tidak ingin menambahkan list data ketik "tidak". Dengan perintah while jawab =="ya" dan if jawab =="tidak". Jawab input("Tambah data (ya/tidak)").
+Gunakanlah perulangan for, dengan perintah for i in range(len(Nama)):. Fungsi "len" ialah untuk mengembalikan panjang (jumlah anggota) dari suatu objek.
+Lalu cetak dengan perintah print
+Selesai
+# Membuat Tugas Praktikum
+data =[]
+while True :
+    nama       = input    ("Nama        : ")
+    nim        = input    ("NIM         : ")
+    tugas      = int(input("Nilai Tugas : "))
+    uts        = int(input("Nilai UTS   : "))
+    uas        = int(input("Nilai UAS   : "))
+    nilaiakhir = float(tugas)*30/100+(uts)*35/100+(uas)*35/100
+    data.append([nama,nim,tugas,uts,uas,nilaiakhir])
+    lagi= input("Tambah data (ya/tidak)? ")
+    if lagi.lower() =="tidak":
+        break
+
+
+print("=====================================================================================");
+print("|  No  |     Nama     |     NIM     |   Tugas   |   UTS   |   UAS   |  Nilai Akhir  |");
+print("=====================================================================================");
+i=0
+for x in data:
+    i+=1
+    print("|  {6:2}  |  {0:20}  |  {1:9}  |  {2:7}  |  {3:5}  | {4:6}  |  {5:11.2f}  |"\
+          .format (x[0][:20 ] , x[1][:9],x[2],x[3],x[4],x[5], i))
+print("=====================================================================================");
+
+
+berikut flowchartnya
+![Screenshot (120)](https://user-images.githubusercontent.com/116137169/203568939-9bde7dda-d9a8-45e4-9578-9566f45f9eb7.png)
+
+
+
